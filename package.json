@@ -1,21 +1,29 @@
 {
   "name": "global-chat-desktop",
   "version": "1.0.0",
+  "description": "Global Chat Desktop App",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron ."
+    "start": "electron .",
+    "release": "electron-builder --publish always"
   },
-  "keywords": [],
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MrChrister08/GlobalChatApp.git"
+  },
+  "author": "MrChrister08",
   "license": "ISC",
-  "description": "Global Chat Desktop App",
-  "dependencies": {},
+  "dependencies": {
+    "electron-updater": "^6.1.1"
+  },
   "devDependencies": {
-    "electron-builder": "^26.0.12",
-    "electron": "^28.0.0"
+    "electron": "^28.0.0",
+    "electron-builder": "^24.0.0"
   },
   "build": {
-    "appId": "com.yourdomain.globalchat"
+    "appId": "com.mrchrister.globalchatapp",
+    "publish": {
+      "provider": "github"
+    }
   }
 }
